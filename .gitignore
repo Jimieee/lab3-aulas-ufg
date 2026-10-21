@@ -1,0 +1,18 @@
+target/
+**/target/
+.idea/
+*.iml
+nbproject/private/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+*.zip
+*.class
+__pycache__/
+*.pyc
+
+# Referencias locales del laboratorio.
+/LABORATORIO 3-Programacion Orientada a Objetos y Estructuras de Datos.pdf
+/reparto-laboratorio3.md

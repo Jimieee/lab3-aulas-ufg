@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox spacing="14" prefWidth="640" prefHeight="620"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="edu.ufg.aulas.controladores.HomeController">
+    <padding><Insets top="28" right="36" bottom="28" left="36"/></padding>
+    <Label text="Registro de aulas" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <Label fx:id="lblBienvenida" text="Bienvenido" wrapText="true"/>
+    <GridPane hgap="16" vgap="14">
+        <columnConstraints>
+            <ColumnConstraints minWidth="110"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+        <Label text="Nombre / código" labelFor="$txtNombre" GridPane.rowIndex="0"/>
+        <TextField fx:id="txtNombre" promptText="B-204" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text="Edificio" labelFor="$txtEdificio" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtEdificio" promptText="Edificio B" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="Planta" labelFor="$cbPlanta" GridPane.rowIndex="2"/>
+        <ComboBox fx:id="cbPlanta" promptText="Seleccione una planta" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label text="Capacidad" labelFor="$txtCapacidad" GridPane.rowIndex="3"/>
+        <TextField fx:id="txtCapacidad" promptText="30" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <Label text="Tipo de aula" labelFor="$cbTipoAula" GridPane.rowIndex="4"/>
+        <ComboBox fx:id="cbTipoAula" promptText="Seleccione un tipo" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+        <Label text="Responsable" labelFor="$txtResponsable" GridPane.rowIndex="5"/>
+        <TextField fx:id="txtResponsable" promptText="Nombre del responsable" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+        <Label text="Estado" labelFor="$cbEstado" GridPane.rowIndex="6"/>
+        <ComboBox fx:id="cbEstado" promptText="Seleccione un estado" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    </GridPane>
+    <HBox spacing="12">
+        <Button fx:id="btnGuardar" text="Guardar" onAction="#guardar" disable="true"/>
+        <Button fx:id="btnLimpiar" text="Limpiar" onAction="#limpiar"/>
+        <Button fx:id="btnCerrarSesion" text="Cerrar sesión" onAction="#cerrarSesion"/>
+    </HBox>
+    <Label fx:id="lblMensaje" wrapText="true"/>
+</VBox>

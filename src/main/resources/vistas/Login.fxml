@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" spacing="18" prefWidth="640" prefHeight="620"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="edu.ufg.aulas.controladores.LoginController">
+    <padding><Insets top="40" right="70" bottom="40" left="70"/></padding>
+    <Label text="UFG · Registro de aulas" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <Label text="Iniciar sesión" style="-fx-font-size: 18px;"/>
+    <Label text="Correo electrónico" labelFor="$txtCorreo"/>
+    <TextField fx:id="txtCorreo" promptText="correo@ufg.edu" maxWidth="360"/>
+    <Label text="Contraseña" labelFor="$txtClave"/>
+    <PasswordField fx:id="txtClave" promptText="Contraseña" maxWidth="360"/>
+    <Button fx:id="btnIngresar" text="Ingresar" onAction="#ingresar" defaultButton="true"/>
+    <Label fx:id="lblMensaje" textFill="RED" wrapText="true" maxWidth="360"/>
+</VBox>
